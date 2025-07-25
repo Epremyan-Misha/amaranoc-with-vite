@@ -15,7 +15,7 @@ export default function Register() {
 
     try {
       await createUserWithEmailAndPassword(auth, email, password);
-      navigate("/"); // գրանցում հաջող => տուն էջ
+      navigate("/");
     } catch (err) {
       setError(err.message);
     }
@@ -23,7 +23,7 @@ export default function Register() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
-      <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8">
+      <div className="max-w-md w-full bg-white rounded-4xl shadow-md p-8">
         <h2 className="text-2xl font-bold mb-6 text-center">Գրանցվել</h2>
 
         {error && (
@@ -65,7 +65,7 @@ export default function Register() {
 
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition"
+            className="w-full cursor-pointer bg-green-600 text-white font-semibold py-2 rounded hover:bg-black-300 transition"
           >
             Գրանցվել
           </button>
@@ -73,7 +73,7 @@ export default function Register() {
 
         <p className="mt-4 text-center">
           Ունե՞ք հաշիվ?{" "}
-          <Link to="/login" className="text-blue-600 hover:underline">
+          <Link to="/login" className="text-green-600 hover:underline">
             Մուտք գործել
           </Link>
         </p>

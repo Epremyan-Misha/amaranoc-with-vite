@@ -15,7 +15,7 @@ export default function Login() {
 
     try {
       await signInWithEmailAndPassword(auth, email, password);
-      navigate("/"); // login հաջող => տուն էջ
+      navigate("/");
     } catch (err) {
       setError(err.message);
     }
@@ -23,7 +23,7 @@ export default function Login() {
 
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-100 p-4">
-      <div className="max-w-md w-full bg-white rounded-lg shadow-md p-8">
+      <div className="max-w-md w-full bg-white rounded-4xl  shadow-md p-8">
         <h2 className="text-2xl font-bold mb-6 text-center">Մուտք գործել</h2>
 
         {error && (
@@ -65,12 +65,12 @@ export default function Login() {
 
           <button
             type="submit"
-            className="w-full bg-blue-600 text-white font-semibold py-2 rounded hover:bg-blue-700 transition"
+            className="w-full cursor-pointer bg-green-600 text-white font-semibold py-2 rounded hover:bg-black-300 transition"
           >
             Մուտք գործել
           </button>
           <p className="mt-4 text-center">
-  Չունե՞ք հաշիվ? <Link to="/register" className="text-blue-600 hover:underline">Գրանցվել</Link>
+  Չունե՞ք հաշիվ? <Link to="/register" className="text-green-600 hover:underline">Գրանցվել</Link>
 </p>
         </form>
       </div>

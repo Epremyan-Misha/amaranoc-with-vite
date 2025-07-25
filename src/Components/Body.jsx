@@ -28,8 +28,8 @@ function Body() {
   return (
     <>
       <MapBody />
-      <div className="flex">
-        <div className="p-4 border-2 border-[rgb(196,193,193)] border-solid w-80 h-[1770px] ml-14 -mt-12 rounded-2xl">
+      <div className="flex -mt-24">
+        <div className="p-4 border-2 border-[rgb(196,193,193)] border-solid w-80 h-[1467px] ml-14 -mt-27 rounded-2xl">
           <BodyInfo />
           <CourseInputsAndPrace />
           <PeopleCount
